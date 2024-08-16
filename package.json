@@ -1,7 +1,7 @@
 {
   "name": "@eric.murano/dough-ui",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -17,6 +17,10 @@
     "./hooks/*": {
       "import": "./dist/hooks/*/index.js",
       "types": "./dist/hooks/*/index.d.ts"
+    },
+    "./page-layouts/*": {
+      "import": "./dist/page-layouts/*/index.js",
+      "types": "./dist/page-layouts/*/index.d.ts"
     }
   },
   "files": [

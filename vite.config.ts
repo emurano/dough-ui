@@ -31,6 +31,7 @@ export default defineConfig({
         'src/main.ts',
         'src/components/**/index.{ts,tsx}',
         'src/hooks/**/index.{ts,tsx}',
+        'src/internal/**/index.{ts,tsx}',
       ]),
 
       output: {

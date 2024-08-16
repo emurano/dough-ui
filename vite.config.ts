@@ -30,6 +30,7 @@ export default defineConfig({
       input: createInputObject([
         'src/main.ts',
         'src/components/**/index.{ts,tsx}',
+        'src/hooks/**/index.{ts,tsx}',
       ]),
 
       output: {

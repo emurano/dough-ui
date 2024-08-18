@@ -59,6 +59,23 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/test/setup-tests.ts',
     globals: true,
+    coverage: {
+      provider: 'istanbul',
+      include: [
+        'src/**/*',
+      ],
+      exclude: [
+        './src/**/*.stories.ts',
+        './src/**/*.stories.tsx',
+        './src/**/*.test.ts',
+        './src/**/*.test.tsx',
+        '**/*/__tests__',
+        '**/*/__stories__',
+        './src/stories/**/*',
+        './src/type/**/*',
+      ],
+
+    }
   }
 });
 

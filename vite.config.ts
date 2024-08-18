@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import { extname, relative, resolve } from 'path';
 import { fileURLToPath } from 'node:url';
@@ -46,8 +47,19 @@ export default defineConfig({
     alias: {
       '@src': resolve(__dirname, './src'),
       '@components': resolve(__dirname, './src/components'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@page-layouts': resolve(__dirname, './src/page-layouts'),
+      '@styling': resolve(__dirname, './src/styling'),
+      '@type': resolve(__dirname, './src/type'),
     },
   },
+
+  test: {
+    include: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
+    environment: 'jsdom',
+    setupFiles: './src/test/setup-tests.ts',
+    globals: true,
+  }
 });
 
 const ignoredPatterns = ['src/**/*.stories.tsx'];

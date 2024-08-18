@@ -1,12 +1,32 @@
+import { BaseComponentProps } from '@type/base-component-props.type.ts';
+import { Size } from '@type/size.type';
 import classNames from 'classnames';
 import { HTMLAttributes } from 'react';
 import styles from './text.module.scss';
 
-export type TextProps = HTMLAttributes<HTMLSpanElement>;
+export interface TextProps
+  extends BaseComponentProps,
+    HTMLAttributes<HTMLSpanElement> {
+  /**
+   * The preset size of the text
+   */
+  size?: Size;
+}
 
-export function Text({ children, className, ...props }: TextProps) {
+/**
+ * Renders text with the given preset size and preset colour
+ */
+export function Text({
+  children,
+  className,
+  testId,
+  size = 'medium',
+  ...props
+}: TextProps) {
+  const cssClasses = classNames(className, styles.Text, styles[`Size_${size}`]);
+
   return (
-    <span {...props} className={classNames(styles.Text, className)}>
+    <span {...props} className={cssClasses} data-testid={testId}>
       {children}
     </span>
   );

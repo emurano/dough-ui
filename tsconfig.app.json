@@ -33,6 +33,18 @@
       ],
       "@components/*": [
         "./src/components/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@page-layouts/*": [
+        "./src/page-layouts/*"
+      ],
+      "@styling/*": [
+        "./src/styling/*"
+      ],
+      "@type/*": [
+        "./src/type/*"
       ]
     }
   },

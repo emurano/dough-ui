@@ -14,6 +14,10 @@ const config: StorybookConfig = {
     options: {},
   },
 
+  core: {
+    disableTelemetry: true, // 👈 Disables telemetry
+  },
+
   previewHead: (head) => `
     ${head}
     <link rel="preconnect" href="https://fonts.googleapis.com">

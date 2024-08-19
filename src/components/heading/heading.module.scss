@@ -1,0 +1,33 @@
+@use '@styling/colour';
+@use '@styling/text';
+
+.Heading {
+  @include text.heading-font;
+  font-weight: 400;
+
+  color: colour.$color-primary;
+
+  //font-size: text.$text-size-medium;
+
+
+}
+
+//h1.Heading {
+//  &.Size_small {
+//    font-size: text.$text-size-small * 2;
+//    margin-block-start: text.$text-size-small;
+//    margin-block-end: text.$text-size-small;
+//  }
+//
+//  &.Size_medium {
+//    font-size: text.$text-size-medium * 2;
+//    margin-block-start: text.$text-size-medium;
+//    margin-block-end: text.$text-size-medium;
+//  }
+//
+//  &.Size_large {
+//    font-size: text.$text-size-large * 2;
+//    margin-block-start: text.$text-size-large;
+//    margin-block-end: text.$text-size-large;
+//  }
+//}

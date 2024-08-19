@@ -5,8 +5,16 @@
 }
 
 @mixin text-font {
-  font-family: "Inter Tight", sans-serif;
+  //font-family: "Inter Tight", sans-serif;
+  font-family: "Nokora", sans-serif;
   font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@mixin heading-font {
+  font-family: "Inter Tight", sans-serif;
+  //font-family: "Nokora", sans-serif;
+  font-optical-sizing: none;
   font-style: normal;
 }
 

@@ -1,9 +1,10 @@
 @use '@styling/text';
+@use '@styling/colour';
 
 .ParagraphText {
   @include text.text-font;
 
-  color: #001325;
+  color: colour.$color-primary;
 
   &.Size_small {
     font-size: text.$text-size-small;

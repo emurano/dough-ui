@@ -1,0 +1,14 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as HeadingStories from './heading.component.stories';
+
+<Meta of={HeadingStories} />
+
+# Heading
+
+A standard heading with levels from h1 to h6
+
+<Canvas of={HeadingStories.Primary} />
+<Canvas of={HeadingStories.WithParagraphs} />
+
+
+<Controls />

@@ -1,0 +1,21 @@
+@use '@styling/text';
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../../assets/fonts/Rubik-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../assets/fonts/InterTight-VariableFont_wght.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:global(:root) {
+  //font-family: "Rubik", sans-serif;
+  font-family: "Nokora", sans-serif;
+  font-size: text.$text-size-medium;
+}

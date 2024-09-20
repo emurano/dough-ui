@@ -4,23 +4,70 @@
 .ParagraphText {
   @include text.text-font;
 
-  color: colour.$color-primary;
+  color: colour.$colour-primary-1;
+
+  //&.Size_small {
+  //  font-size: text.$text-size-small;
+  //  margin-block-start: text.$text-size-small;
+  //  margin-block-end: text.$text-size-small;
+  //}
+  //
+  //&.Size_medium {
+  //  font-size: text.$text-size-medium;
+  //  margin-block-start: text.$text-size-medium;
+  //  margin-block-end: text.$text-size-medium;
+  //}
+  //
+  //&.Size_large {
+  //  font-size: text.$text-size-large;
+  //  margin-block-start: text.$text-size-large;
+  //  margin-block-end: text.$text-size-large;
+  //}
+
+  &.Size_extra-small {
+    &.SizeMode_parent-relative {
+      font-size: text.$text-size-parent-relative-extra-small;
+    }
+    &.SizeMode_globally-relative {
+      font-size: text.$text-size-globally-relative-extra-small;
+    }
+  }
 
   &.Size_small {
-    font-size: text.$text-size-small;
-    margin-block-start: text.$text-size-small;
-    margin-block-end: text.$text-size-small;
+    &.SizeMode_parent-relative {
+      font-size: text.$text-size-parent-relative-small;
+    }
+    &.SizeMode_globally-relative {
+      font-size: text.$text-size-globally-relative-small;
+    }
   }
 
   &.Size_medium {
-    font-size: text.$text-size-medium;
-    margin-block-start: text.$text-size-medium;
-    margin-block-end: text.$text-size-medium;
+    &.SizeMode_parent-relative {
+      font-size: text.$text-size-parent-relative-medium;
+    }
+    &.SizeMode_globally-relative {
+      font-size: text.$text-size-globally-relative-medium;
+    }
   }
 
   &.Size_large {
-    font-size: text.$text-size-large;
-    margin-block-start: text.$text-size-large;
-    margin-block-end: text.$text-size-large;
+    &.SizeMode_parent-relative {
+      font-size: text.$text-size-parent-relative-large;
+    }
+    &.SizeMode_globally-relative {
+      font-size: text.$text-size-globally-relative-large;
+    }
+  }
+
+  &.Size_extra-large {
+    &.SizeMode_parent-relative {
+      font-size: text.$text-size-parent-relative-extra-large;
+    }
+    &.SizeMode_globally-relative {
+      font-size: text.$text-size-globally-relative-extra-large;
+    }
   }
 }
+
+

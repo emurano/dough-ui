@@ -1,1 +1,88 @@
-$color-primary: #003263;
+$colour-neutral-1: var(--dough-ui-colour-neutral-1, #102A43);
+$colour-neutral-2: var(--dough-ui-colour-neutral-2, #243B53);
+$colour-neutral-3: var(--dough-ui-colour-neutral-3, #334E68);
+$colour-neutral-4: var(--dough-ui-colour-neutral-4, #486581);
+$colour-neutral-5: var(--dough-ui-colour-neutral-5, #627D98);
+$colour-neutral-6: var(--dough-ui-colour-neutral-6, #829AB1);
+$colour-neutral-7: var(--dough-ui-colour-neutral-7, #9FB3C8);
+$colour-neutral-8: var(--dough-ui-colour-neutral-8, #BCCCDC);
+$colour-neutral-9: var(--dough-ui-colour-neutral-9, #D9E2EC);
+$colour-neutral-10: var(--dough-ui-colour-neutral-10, #F0F4F8);
+
+$colour-primary-1: var(--dough-ui-colour-primary-1, #003E6B);
+$colour-primary-2: var(--dough-ui-colour-primary-2, #0A558C);
+$colour-primary-3: var(--dough-ui-colour-primary-3, #0F609B);
+$colour-primary-4: var(--dough-ui-colour-primary-4, #186FAF);
+$colour-primary-5: var(--dough-ui-colour-primary-5, #2680C2);
+$colour-primary-6: var(--dough-ui-colour-primary-6, #4098D7);
+$colour-primary-7: var(--dough-ui-colour-primary-7, #62B0E8);
+$colour-primary-8: var(--dough-ui-colour-primary-8, #84C5F4);
+$colour-primary-9: var(--dough-ui-colour-primary-9, #B6E0FE);
+$colour-primary-10: var(--dough-ui-colour-primary-10, #DCEEFB);
+
+$colour-red-1: var(--dough-ui-colour-red-1, #610404);
+$colour-red-2: var(--dough-ui-colour-red-2, #780A0A);
+$colour-red-3: var(--dough-ui-colour-red-3, #911111);
+$colour-red-4: var(--dough-ui-colour-red-4, #A61B1B);
+$colour-red-5: var(--dough-ui-colour-red-5, #BA2525);
+$colour-red-6: var(--dough-ui-colour-red-6, #D64545);
+$colour-red-7: var(--dough-ui-colour-red-7, #E66A6A);
+$colour-red-8: var(--dough-ui-colour-red-8, #F29B9B);
+$colour-red-9: var(--dough-ui-colour-red-9, #FACDCD);
+$colour-red-10: var(--dough-ui-colour-red-10, #FFEEEE);
+
+$colour-yellow-1: var(--dough-ui-colour-yellow-1, #513C06);
+$colour-yellow-2: var(--dough-ui-colour-yellow-2, #7C5E10);
+$colour-yellow-3: var(--dough-ui-colour-yellow-3, #A27C1A);
+$colour-yellow-4: var(--dough-ui-colour-yellow-4, #C99A2E);
+$colour-yellow-5: var(--dough-ui-colour-yellow-5, #E9B949);
+$colour-yellow-6: var(--dough-ui-colour-yellow-6, #F7D070);
+$colour-yellow-7: var(--dough-ui-colour-yellow-7, #F9DA8B);
+$colour-yellow-8: var(--dough-ui-colour-yellow-8, #F8E3A3);
+$colour-yellow-9: var(--dough-ui-colour-yellow-9, #FCEFC7);
+$colour-yellow-10: var(--dough-ui-colour-yellow-10, #FFFAEB);
+
+$colour-green-1: var(--dough-ui-colour-green-1, #014D40);
+$colour-green-2: var(--dough-ui-colour-green-2, #0C6B58);
+$colour-green-3: var(--dough-ui-colour-green-3, #147D64);
+$colour-green-4: var(--dough-ui-colour-green-4, #199473);
+$colour-green-5: var(--dough-ui-colour-green-5, #27AB83);
+$colour-green-6: var(--dough-ui-colour-green-6, #3EBD93);
+$colour-green-7: var(--dough-ui-colour-green-7, #65D6AD);
+$colour-green-8: var(--dough-ui-colour-green-8, #8EEDC7);
+$colour-green-9: var(--dough-ui-colour-green-9, #C6F7E2);
+$colour-green-10: var(--dough-ui-colour-green-10, #EFFCF6);
+
+
+$colour-secondary: var(--dough-ui-colour-secondary, #005963);
+$colour-secondary-inverse: var(--dough-ui-colour-secondary-inverse, color-mix(in srgb, $colour-primary-1 15%, #ffffff));
+
+$colour-accented-background: var(--dough-ui-colour-accented-background, color-mix(in srgb, $colour-primary-1 5%, #ffffff));
+
+
+$colour-primary-active: var(--dough-ui-colour-primary-active, color-mix(in srgb, $colour-primary-1 50%, #ffffff));
+$colour-primary-hover: var(--dough-ui-colour-primary-hover, color-mix(in srgb, $colour-primary-1 75%, #ffffff));
+$colour-primary-focus-ring: var(--dough-ui-colour-primary-focus-ring, color-mix(in srgb, $colour-primary-1 25%, #633100));
+$colour-primary-hover: var(--dough-ui-colour-primary-hover, color-mix(in srgb, $colour-primary-1 75%, #ffffff));
+
+$colour-neutral-lightest: white;
+$colour-neutral-darkest: black;
+
+//003263
+//B5832F
+//F59A02
+//376BA0
+//75603C
+
+
+//CYAN
+//$colour-primary-1: var(--dough-ui-colour-primary-1, #044E54);
+//$colour-primary-2: var(--dough-ui-colour-primary-2, #0A6C74);
+//$colour-primary-3: var(--dough-ui-colour-primary-3, #0E7C86);
+//$colour-primary-4: var(--dough-ui-colour-primary-4, #14919B);
+//$colour-primary-5: var(--dough-ui-colour-primary-5, #2CB1BC);
+//$colour-primary-6: var(--dough-ui-colour-primary-6, #38BEC9);
+//$colour-primary-7: var(--dough-ui-colour-primary-7, #54D1DB);
+//$colour-primary-8: var(--dough-ui-colour-primary-8, #87EAF2);
+//$colour-primary-9: var(--dough-ui-colour-primary-9, #BEF8FD);
+//$colour-primary-10: var(--dough-ui-colour-primary-10, #E0FCFF);

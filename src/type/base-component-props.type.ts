@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 /**
  * Props that all components will export
  */
@@ -8,4 +10,8 @@ export interface BaseComponentProps {
    * of the component, as well as the prefix for sub-elements
    */
   testId?: string;
+
+  className?: string;
+
+  style?: CSSProperties;
 }

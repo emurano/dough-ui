@@ -1,3 +1,4 @@
+import React from 'react';
 import { Canvas, Meta, Controls } from '@storybook/blocks';
 import * as TextStories from './text.component.stories';
 
@@ -11,5 +12,60 @@ Use this component to output generic text when other, more specific text-based c
 
 <Canvas of={TextStories.Primary} />
 
+## Props
 
 <Controls />
+
+
+## Sizes
+
+Text has a set of preset sizes that you can use:
+
+ - `extra-small`
+ - `small`
+ - `medium`
+ - `large`
+ - `extra-large`
+
+<Canvas of={TextStories.LargeExample} sourceState="shown" withToolbar={false} />
+
+
+## Parent-relative size
+
+By default, the size presets are based off the document's root font-size. You can make it so that the size is based on
+the parent's font-size.
+
+ - `parent-relative` - base the preset size on the parent's font-size
+ - `globally-relative` - base the preset size on the root font-size
+
+Typically, you'll want the size mode to be `globally-relative`, as most of the time text needs to be a predictable size.
+
+When building a compound component with many different components within it, you might want to use `parent-relative`,
+as this will make the text's size relative to the rest of the component. This keeps the component's elements congruent
+with each other.
+
+
+#### `parent-relative` Examples
+
+These examples show that the preset size makes the text larger or smaller than the parent's font-size.
+
+#### `parent-relative` with large preset
+
+<Canvas of={TextStories.ParentRelativeLargeExample} sourceState="shown" withToolbar={false} />
+
+#### `parent-relative` with small preset
+
+<Canvas of={TextStories.ParentRelativeSmallExample} sourceState="shown" withToolbar={false} />
+
+#### `globally-relative` Examples
+
+These examples show that the preset size makes the text larger or smaller than the document's font-size and the parent's
+font-size has no effect.
+
+#### `globally-relative` with large preset
+
+<Canvas of={TextStories.GloballyRelativeLargeExample} sourceState="shown" withToolbar={false} />
+
+#### `globally-relative` with small preset
+
+<Canvas of={TextStories.GloballyRelativeSmallExample} sourceState="shown" withToolbar={false} />

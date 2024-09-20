@@ -1,4 +1,9 @@
-export const Sizes = ['small', 'medium', 'large'] as const;
+export const Sizes = [
+  'extra-small',
+  'small',
+  'medium',
+  'large',
+  'extra-large',
+] as const;
 
-export type Size = typeof Sizes[number];
-
+export type Size = (typeof Sizes)[number];

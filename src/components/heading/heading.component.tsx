@@ -1,11 +1,12 @@
+import { SizeMode } from '../../type/size-mode.type.ts';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { BaseComponentProps } from '@type/base-component-props.type';
-import { Size } from '@type/size.type';
+import { BaseComponentProps } from '../../type/base-component-props.type';
+import { Size } from '../../type/size.type';
 import styles from './heading.module.scss';
 
 export const HeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
-export type HeadingLevel = typeof HeadingLevels[number];
+export type HeadingLevel = (typeof HeadingLevels)[number];
 
 export interface HeadingProps
   extends HTMLAttributes<HTMLHeadingElement>,
@@ -19,6 +20,12 @@ export interface HeadingProps
    * The preset size of the text
    */
   size?: Size;
+
+  /**
+   * Whether the size prop is applied relative to the root font-size or the
+   * parent font-size
+   */
+  sizeMode?: SizeMode;
 }
 
 /**
@@ -29,11 +36,17 @@ export function Heading({
   level = 'h1',
   className,
   size = 'medium',
+  sizeMode = 'globally-relative',
   ...props
 }: HeadingProps) {
   const finalProps: HTMLAttributes<HTMLHeadingElement> = {
     ...props,
-    className: classNames(styles.Heading, className, styles[`Size_${size}`]),
+    className: classNames(
+      styles.Heading,
+      className,
+      styles[`Size_${size}`],
+      styles[`SizeMode_${sizeMode}`]
+    ),
   };
 
   if (level === 'h1') return <h1 {...finalProps}>{children}</h1>;

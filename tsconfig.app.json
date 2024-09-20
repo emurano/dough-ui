@@ -40,6 +40,9 @@
       "@page-layouts/*": [
         "./src/page-layouts/*"
       ],
+      "@providers/*": [
+        "./src/providers/*"
+      ],
       "@styling/*": [
         "./src/styling/*"
       ],

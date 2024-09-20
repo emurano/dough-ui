@@ -1,12 +1,53 @@
-import classNames from 'classnames';
 import { HTMLAttributes } from 'react';
+import classNames from 'classnames';
+import { useTextFont } from '@hooks/use-text-font';
+import { BaseComponentProps } from '@type/base-component-props.type';
+import { SizeMode } from '@type/size-mode.type';
+import { Size } from '@type/size.type';
+
 import styles from './text.module.scss';
 
-export type TextProps = HTMLAttributes<HTMLSpanElement>;
+export interface TextProps
+  extends BaseComponentProps,
+    HTMLAttributes<HTMLSpanElement> {
+  /**
+   * The preset size of the text
+   *
+   * @default medium
+   */
+  size?: Size;
 
-export function Text({ children, className, ...props }: TextProps) {
+  /**
+   * Whether the size prop is applied relative to the root font-size or the
+   * parent font-size
+   */
+  sizeMode?: SizeMode;
+}
+
+/**
+ * Renders text with the given preset size and preset colour
+ */
+export function Text({
+  children,
+  className,
+  testId,
+  size = 'medium',
+  sizeMode = 'globally-relative',
+  ...props
+}: TextProps) {
+  useTextFont();
+
+  const cssClasses = classNames(
+    className,
+    styles.Text,
+    styles[`Size_${size}`],
+    styles[`SizeMode_${sizeMode}`]
+  );
+
+  console.log('Text :: cssClasses', cssClasses);
+
   return (
-    <span {...props} className={classNames(styles.Text, className)}>
+    <span {...props} className={cssClasses} data-testid={testId}>
       {children}
     </span>
   );

@@ -33,10 +33,26 @@
       ],
       "@components/*": [
         "./src/components/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@page-layouts/*": [
+        "./src/page-layouts/*"
+      ],
+      "@providers/*": [
+        "./src/providers/*"
+      ],
+      "@styling/*": [
+        "./src/styling/*"
+      ],
+      "@type/*": [
+        "./src/type/*"
       ]
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "src/vite-env.d.ts"
   ]
 }

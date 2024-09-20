@@ -1,8 +1,10 @@
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { BaseComponentProps } from '../../type/base-component-props.type';
-import { Size } from '../../type/size.type';
-import { SizeMode } from '../../type/size-mode.type';
+import { useTextFont } from '@hooks/use-text-font';
+import { BaseComponentProps } from '@type/base-component-props.type';
+import { SizeMode } from '@type/size-mode.type';
+import { Size } from '@type/size.type';
+
 import styles from './text.module.scss';
 
 export interface TextProps
@@ -33,6 +35,8 @@ export function Text({
   sizeMode = 'globally-relative',
   ...props
 }: TextProps) {
+  useTextFont();
+
   const cssClasses = classNames(
     className,
     styles.Text,

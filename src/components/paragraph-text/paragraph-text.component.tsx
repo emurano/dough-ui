@@ -1,8 +1,9 @@
-import { BaseComponentProps } from '../../type/base-component-props.type.ts';
-import { SizeMode } from '../../type/size-mode.type.ts';
-import { Size } from '../../type/size.type';
-import classNames from 'classnames';
 import { HTMLAttributes } from 'react';
+import classNames from 'classnames';
+import { useTextFont } from '@hooks/use-text-font';
+import { BaseComponentProps } from '@type/base-component-props.type';
+import { SizeMode } from '@type/size-mode.type';
+import { Size } from '@type/size.type';
 import styles from './paragraph-text.module.scss';
 
 export interface ParagraphTextProps
@@ -31,6 +32,8 @@ export function ParagraphText({
   sizeMode = 'globally-relative',
   ...props
 }: ParagraphTextProps) {
+  useTextFont();
+
   const cssClasses = classNames(
     className,
     styles.ParagraphText,

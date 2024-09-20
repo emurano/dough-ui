@@ -1,8 +1,9 @@
-import { SizeMode } from '../../type/size-mode.type.ts';
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { BaseComponentProps } from '../../type/base-component-props.type';
-import { Size } from '../../type/size.type';
+import { BaseComponentProps } from '@type/base-component-props.type';
+import { SizeMode } from '@type/size-mode.type';
+import { Size } from '@type/size.type';
+import { useHeadingFont } from '@hooks/use-heading-font';
 import styles from './heading.module.scss';
 
 export const HeadingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const;
@@ -39,6 +40,8 @@ export function Heading({
   sizeMode = 'globally-relative',
   ...props
 }: HeadingProps) {
+  useHeadingFont();
+
   const finalProps: HTMLAttributes<HTMLHeadingElement> = {
     ...props,
     className: classNames(

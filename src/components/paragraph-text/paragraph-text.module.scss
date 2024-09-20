@@ -6,24 +6,6 @@
 
   color: colour.$colour-primary-1;
 
-  //&.Size_small {
-  //  font-size: text.$text-size-small;
-  //  margin-block-start: text.$text-size-small;
-  //  margin-block-end: text.$text-size-small;
-  //}
-  //
-  //&.Size_medium {
-  //  font-size: text.$text-size-medium;
-  //  margin-block-start: text.$text-size-medium;
-  //  margin-block-end: text.$text-size-medium;
-  //}
-  //
-  //&.Size_large {
-  //  font-size: text.$text-size-large;
-  //  margin-block-start: text.$text-size-large;
-  //  margin-block-end: text.$text-size-large;
-  //}
-
   &.Size_extra-small {
     &.SizeMode_parent-relative {
       font-size: text.$text-size-parent-relative-extra-small;

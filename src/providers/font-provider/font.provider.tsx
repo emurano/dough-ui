@@ -7,10 +7,14 @@ export interface FontProviderProps {
 
 export function FontProvider({ children }: FontProviderProps) {
   const uiFontStyleRef = useRef<HTMLStyleElement | null>(null);
+  const textFontStyleRef = useRef<HTMLStyleElement | null>(null);
+  const headingFontStyleRef = useRef<HTMLStyleElement | null>(null);
 
   const context = useMemo<FontContextType>(
     () => ({
       uiFontStyleRef,
+      textFontStyleRef,
+      headingFontStyleRef,
     }),
     [uiFontStyleRef]
   );

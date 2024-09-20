@@ -3,7 +3,7 @@ import { Sizes } from '@type/size.type';
 import { ColumnStack, RowStack } from '../../../layout-primitives';
 import { Button } from '../../button';
 import { ParagraphText } from '../../paragraph-text';
-import { Input, InputStyles } from '../input.component';
+import { Input, InputStyles, InputWidths } from '../input.component';
 
 const meta = {
   title: 'Components/Input',
@@ -12,6 +12,11 @@ const meta = {
     size: {
       control: 'select',
       options: [...Sizes],
+    },
+
+    width: {
+      control: 'select',
+      options: [...InputWidths],
     },
 
     inputStyle: {
@@ -54,7 +59,7 @@ const meta = {
     size: 'medium',
     inputStyle: 'bordered',
     type: 'text',
-    defaultValue: '111 Eagle Street'
+    defaultValue: '111 Eagle Street',
   },
 } satisfies Meta<typeof Input>;
 
@@ -71,7 +76,7 @@ export const NextToButton: Story = {
   name: 'Next to Button',
   render: ({ value, ...args }) => (
     <ColumnStack horizontalAlignment="start">
-      <RowStack>
+      <RowStack gapSize="small">
         <Input {...args} value={value} />
         <Button size={args.size}>Save Changes</Button>
         <Button size={args.size} variant="secondary">
@@ -81,10 +86,21 @@ export const NextToButton: Story = {
           Delete
         </Button>
       </RowStack>
-      <ParagraphText>
+      <ParagraphText size={args.size}>
         This demonstrates a small, inline form. See how the fields all align and
         are the same height.
       </ParagraphText>
     </ColumnStack>
+  ),
+};
+
+export const WithParentWithSetWidth: Story = {
+  name: 'with parent with set width (300px)',
+  render: ({ value, ...args }) => (
+    <div
+      style={{ width: '300px', outline: '1px dashed green', padding: '1em' }}
+    >
+      <Input {...args} value={value} />
+    </div>
   ),
 };

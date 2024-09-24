@@ -36,6 +36,7 @@ export default defineConfig({
         'src/hooks/**/index.{ts,tsx}',
         'src/page-layouts/**/index.{ts,tsx}',
         'src/internal/**/index.{ts,tsx}',
+        'src/type/**/index.{ts,tsx}',
       ]),
 
       output: {

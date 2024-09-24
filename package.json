@@ -29,6 +29,10 @@
     "./providers/*": {
       "import": "./dist/providers/*/index.js",
       "types": "./dist/providers/*/index.d.ts"
+    },
+    "./type/*": {
+      "import": "./dist/type/*/index.js",
+      "types": "./dist/type/*/index.d.ts"
     }
   },
   "files": [

@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { SizeModes } from '@type/size-mode.type';
 import { Sizes } from '@type/size.type';
 import { ColumnStack, RowStack } from '../../../layout-primitives';
 import { Button } from '../../button';
@@ -12,6 +13,11 @@ const meta = {
     size: {
       control: 'select',
       options: [...Sizes],
+    },
+
+    sizeMode: {
+      control: 'select',
+      options: [...SizeModes],
     },
 
     width: {
@@ -57,9 +63,11 @@ const meta = {
 
   args: {
     size: 'medium',
+    sizeMode: 'globally-relative',
     inputStyle: 'bordered',
     type: 'text',
     defaultValue: '111 Eagle Street',
+    placeholder: 'Start typing ...'
   },
 } satisfies Meta<typeof Input>;
 
@@ -73,20 +81,27 @@ export const Example: Story = {
 };
 
 export const NextToButton: Story = {
-  name: 'Next to Button',
+  name: 'Next to Buttons',
   render: ({ value, ...args }) => (
-    <ColumnStack horizontalAlignment="start">
-      <RowStack gapSize="small">
+    <ColumnStack horizontalAlignment="start" style={{ fontSize: '1rem' }}>
+      <RowStack gapSize={args.size}>
         <Input {...args} value={value} />
-        <Button size={args.size}>Save Changes</Button>
-        <Button size={args.size} variant="secondary">
+        <Button size={args.size} sizeMode={args.sizeMode}>
+          Save Changes
+        </Button>
+        <Button size={args.size} sizeMode={args.sizeMode} variant="secondary">
           Reset
         </Button>
-        <Button size={args.size} variant="danger" buttonStyle="link">
+        <Button
+          size={args.size}
+          sizeMode={args.sizeMode}
+          variant="danger"
+          buttonStyle="link"
+        >
           Delete
         </Button>
       </RowStack>
-      <ParagraphText size={args.size}>
+      <ParagraphText size={args.size} sizeMode={args.sizeMode}>
         This demonstrates a small, inline form. See how the fields all align and
         are the same height.
       </ParagraphText>
@@ -103,4 +118,16 @@ export const WithParentWithSetWidth: Story = {
       <Input {...args} value={value} />
     </div>
   ),
+};
+
+export const WithParentWithSetFontSize: Story = {
+  name: 'with parent with set font-size (40px)',
+  render: ({ value, ...args }) => (
+    <div style={{ fontSize: '40px' }}>
+      <Input {...args} value={value} />
+    </div>
+  ),
+  args: {
+    sizeMode: 'parent-relative',
+  }
 };

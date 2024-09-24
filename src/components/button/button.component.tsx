@@ -4,7 +4,7 @@ import {
   Button as ReactAriaButton,
   ButtonProps as ReactAriaButtonProps,
 } from 'react-aria-components';
-import { BaseComponentProps, Size, Variant } from 'src/type';
+import { BaseComponentProps, Size, SizeMode, Variant } from 'src/type';
 import styles from './button.module.scss';
 
 export const ButtonStyles = ['button', 'link'] as const;
@@ -14,7 +14,19 @@ export interface DoughUiButtonProps
   extends Omit<BaseComponentProps, 'className' | 'style'>,
     ReactAriaButtonProps {
   variant?: Variant;
+  /**
+   * The preset size of the button
+   *
+   * @default medium
+   */
   size?: Size;
+
+  /**
+   * Whether the size prop is applied relative to the root font-size or the
+   * parent font-size
+   */
+  sizeMode?: SizeMode;
+
   buttonStyle?: ButtonStyle;
 }
 
@@ -25,6 +37,7 @@ export function Button({
   variant = 'primary',
   size = 'medium',
   buttonStyle = 'button',
+  sizeMode = 'globally-relative',
   ...props
 }: DoughUiButtonProps) {
   useUiFont();
@@ -33,6 +46,7 @@ export function Button({
     className,
     styles.Button,
     styles[`Size_${size}`],
+    styles[`SizeMode_${sizeMode}`],
     styles[`Style_${buttonStyle}`],
     {
       [styles[`Variant_${variant}`]]: !!variant,

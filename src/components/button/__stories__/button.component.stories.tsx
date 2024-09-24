@@ -1,4 +1,4 @@
-import { Sizes, Variants } from '@src/type';
+import { SizeModes, Sizes, Variants } from "@src/type";
 import { Meta, StoryObj } from '@storybook/react';
 import { ColumnStack, RowStack } from '../../../layout-primitives';
 import { Button, ButtonStyles } from "../button.component";
@@ -19,6 +19,11 @@ const meta = {
     size: {
       control: 'select',
       options: [...Sizes],
+    },
+
+    sizeMode: {
+      control: 'select',
+      options: [...SizeModes],
     },
 
     buttonStyle: {

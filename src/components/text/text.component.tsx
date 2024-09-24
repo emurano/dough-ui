@@ -44,8 +44,6 @@ export function Text({
     styles[`SizeMode_${sizeMode}`]
   );
 
-  console.log('Text :: cssClasses', cssClasses);
-
   return (
     <span {...props} className={cssClasses} data-testid={testId}>
       {children}

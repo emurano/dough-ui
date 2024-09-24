@@ -1,47 +1,8 @@
-$common-height-globally-relative-extra-small: 0.5rem;
-$common-height-globally-relative-small: 1rem;
-$common-height-globally-relative-medium: 2.75rem;
-$common-height-globally-relative-large: 3.5rem;
-$common-height-globally-relative-extra-large: 4rem;
-
-$common-height-parent-relative-extra-small: 0.5em;
-$common-height-parent-relative-small: 0.75em;
-$common-height-parent-relative-medium: 1em;
-$common-height-parent-relative-large: 1.5em;
-$common-height-parent-relative-extra-large: 2em;
+@use "sass:map";
+@use "sass:list";
 
 $border-radius-globally-relative-medium: 0.5rem;
 $border-radius-parent-relative-medium: 0.5em;
-
-$common-height-extra-small: 1.5rem;
-$common-height-small: 1.8rem;
-$common-height-medium: 2.25rem;
-$common-height-large: 3rem;
-$common-height-extra-large: 4.1rem;
-
-$common-width-extra-small: 1.5rem;
-$common-width-small: 1.8rem;
-$common-width-medium: 2.25rem;
-$common-width-large: 3rem;
-$common-width-extra-large: 4.1rem;
-
-$common-font-size-extra-small: 0.7em;
-$common-font-size-small: 0.8em;
-$common-font-size-medium: 1em;
-$common-font-size-large: 1.5em;
-$common-font-size-extra-large: 2em;
-
-$common-border-radius-extra-small: 0.5em;
-$common-border-radius-small: 0.5em;
-$common-border-radius-medium: 0.5em;
-$common-border-radius-large: 0.5em;
-$common-border-radius-extra-large: 0.5em;
-
-$common-side-padding-extra-small: 0.5em;
-$common-side-padding-small: 0.5em;
-$common-side-padding-medium: 0.5em;
-$common-side-padding-large: 0.5em;
-$common-side-padding-extra-large: 0.5em;
 
 $sizing-scale-1: 12px;
 $sizing-scale-2: 14px;
@@ -54,3 +15,116 @@ $sizing-scale-8: 36px;
 $sizing-scale-9: 48px;
 $sizing-scale-10: 60px;
 $sizing-scale-11: 72px;
+
+
+$sizes: ("extra-small", "small", "medium", "large", "extra-large");
+$common-heights: ("extra-small": 1.5, "small": 1.8, "medium": 2.75, "large": 4, "extra-large": 6);
+$common-font-sizes: ("extra-small": 0.7, "small": 0.8, "medium": 1, "large": 1.5, "extra-large": 2.25);
+$common-border-radii: ("extra-small": 0.25, "small": 0.25, "medium": 0.5, "large": 0.75, "extra-large": 1);
+$common-padding: ("extra-small": 0.25, "small": 0.5, "medium": 1, "large": 1.5, "extra-large": 2.5);
+
+@mixin common-height($size, $unit: 'em', $property: 'height', $factor: 1) {
+  $figure: map.get($common-heights, $size) * $factor;
+  #{$property}: #{$figure}#{$unit};
+}
+
+@mixin common-font-size($size, $unit: 'em', $property: 'font-size', $factor: 1) {
+  $figure: map.get($common-font-sizes, $size) * $factor;
+  #{$property}: #{$figure}#{$unit};
+}
+
+@mixin common-border-radius($size, $unit: 'em', $property: 'border-radius', $factor: 1) {
+  $figure: map.get($common-border-radii, $size) * $factor;
+  #{$property}: #{$figure}#{$unit};
+}
+
+@mixin common-padding($size, $unit: 'em', $property: 'padding', $factor: 1) {
+  $figure: map.get($common-padding, $size) * $factor;
+  #{$property}: #{$figure}#{$unit};
+}
+
+@mixin globally-relative-size-mode-properties($properties: [], $factor: 1) {
+  @each $size in $sizes {
+    &.Size_#{$size} {
+      &.SizeMode_globally-relative {
+        @each $property in $properties {
+          @include do-properties($property, $size, "rem", $factor);
+        }
+      }
+    }
+  }
+}
+
+@mixin globally-relative-size-mode-properties-with-parent-class($properties: [], $parent-class: "", $factor: 1) {
+  @each $size in $sizes {
+    &.Size_#{$size} {
+      &.SizeMode_globally-relative {
+        #{$parent-class} {
+          @each $property in $properties {
+            @include do-properties($property, $size, "rem", $factor);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin do-properties($property, $size, $unit, $factor: 1) {
+  @if $property == "height" {
+    @include common-height($size, $unit, $property, $factor);
+  }
+  @if $property == "font-size" {
+    @include common-font-size($size, $unit, $property, $factor);
+  }
+  @if $property == "border-radius" {
+    @include common-border-radius($size, $unit, $property, $factor);
+  }
+  @if $property == "padding-left" {
+    @include common-padding($size, $unit, $property, $factor);
+  }
+  @if $property == "padding-right" {
+    @include common-padding($size, $unit, $property, $factor);
+  }
+}
+
+@mixin parent-relative-common-field($ignored-properties: []) {
+  &.SizeMode_parent-relative {
+    @if not list.index($ignored-properties, 'height') {
+      @include common-height('medium', 'em', 'height', 1);
+    }
+
+    @if not list.index($ignored-properties, 'padding') {
+      padding: 0;
+    }
+
+    @if not list.index($ignored-properties, 'padding-left') {
+      @include common-padding('medium', 'em', 'padding-left', 1);
+    }
+
+    @if not list.index($ignored-properties, 'padding-right') {
+      @include common-padding('medium', 'em', 'padding-right', 1);
+    }
+
+    @if not list.index($ignored-properties, 'border-radius') {
+      @include common-border-radius('medium', 'em', 'border-radius', 1);
+    }
+
+    @if not list.index($ignored-properties, 'font-size') {
+      &.Size_extra-small {
+        font-size: 0.7em;
+      }
+      &.Size_small {
+        font-size: 0.8em;
+      }
+      &.Size_medium {
+        font-size: 1em;
+      }
+      &.Size_large {
+        font-size: 1.5em;
+      }
+      &.Size_extra-large {
+        font-size: 2.25em;
+      }
+    }
+  }
+}

@@ -48,9 +48,7 @@ export function Button({
     styles[`Size_${size}`],
     styles[`SizeMode_${sizeMode}`],
     styles[`Style_${buttonStyle}`],
-    {
-      [styles[`Variant_${variant}`]]: !!variant,
-    }
+    styles[`Variant_${variant}`],
   );
 
   return (

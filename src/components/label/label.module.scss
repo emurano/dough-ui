@@ -1,0 +1,5 @@
+@use '@styling/text.scss';
+
+.Label {
+  @include text.text-font;
+}

@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { SizeModes } from '@type/size-mode.type';
 import { Sizes } from '@type/size.type';
-import { ColumnStack, RowStack } from '../../../layout-primitives';
-import { Button } from '../../button';
-import { ParagraphText } from '../../paragraph-text';
+import { ColumnStack, RowStack } from '@src/layout-primitives';
+import { Button } from '@components/button';
+import { ParagraphText } from '@components/paragraph-text';
 import { Input, InputStyles, InputWidths } from '../input.component';
 
 const meta = {

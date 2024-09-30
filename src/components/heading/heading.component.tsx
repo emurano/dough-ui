@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { forwardRef, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { BaseComponentProps } from '@type/base-component-props.type';
 import { SizeMode } from '@type/size-mode.type';
@@ -32,30 +32,38 @@ export interface HeadingProps
 /**
  * A standard heading with levels from h1 to h6
  */
-export function Heading({
-  children,
-  level = 'h1',
-  className,
-  size = 'medium',
-  sizeMode = 'globally-relative',
-  ...props
-}: HeadingProps) {
-  useHeadingFont();
-
-  const finalProps: HTMLAttributes<HTMLHeadingElement> = {
-    ...props,
-    className: classNames(
-      styles.Heading,
+export const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
+  function Heading(
+    {
+      children,
+      level = 'h1',
       className,
-      styles[`Size_${size}`],
-      styles[`SizeMode_${sizeMode}`]
-    ),
-  };
+      size = 'medium',
+      sizeMode = 'globally-relative',
+      ...props
+    },
+    ref
+  ) {
+    useHeadingFont();
 
-  if (level === 'h1') return <h1 {...finalProps}>{children}</h1>;
-  if (level === 'h2') return <h2 {...finalProps}>{children}</h2>;
-  if (level === 'h3') return <h3 {...finalProps}>{children}</h3>;
-  if (level === 'h4') return <h4 {...finalProps}>{children}</h4>;
-  if (level === 'h5') return <h5 {...finalProps}>{children}</h5>;
-  if (level === 'h6') return <h6 {...finalProps}>{children}</h6>;
-}
+    const finalProps: HTMLAttributes<HTMLHeadingElement> = {
+      ...props,
+      className: classNames(
+        styles.Heading,
+        className,
+        styles[`Size_${size}`],
+        styles[`SizeMode_${sizeMode}`]
+      ),
+    };
+
+    // prettier-ignore
+    {
+      if (level === "h1") return <h1 {...finalProps} ref={ref}>{children}</h1>;
+      if (level === "h2") return <h2 {...finalProps} ref={ref}>{children}</h2>;
+      if (level === "h3") return <h3 {...finalProps} ref={ref}>{children}</h3>;
+      if (level === "h4") return <h4 {...finalProps} ref={ref}>{children}</h4>;
+      if (level === "h5") return <h5 {...finalProps} ref={ref}>{children}</h5>;
+      if (level === "h6") return <h6 {...finalProps} ref={ref}>{children}</h6>;
+    }
+  }
+);

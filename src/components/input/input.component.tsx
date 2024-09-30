@@ -1,8 +1,9 @@
-import { useUiFont } from '@hooks/use-ui-font';
-import { SizeMode } from "@type/size-mode.type";
-import { Size } from '@type/size.type';
-import classNames from 'classnames';
+import { forwardRef } from 'react';
 import { Input as ReactAriaInput, InputProps } from 'react-aria-components';
+import classNames from 'classnames';
+import { useUiFont } from '@hooks/use-ui-font';
+import { SizeMode } from '@type/size-mode.type';
+import { Size } from '@type/size.type';
 import styles from './input.module.scss';
 
 export const InputStyles = ['bordered', 'borderless'] as const;
@@ -14,11 +15,10 @@ export const InputWidths = [
   'medium',
   'large',
   'extra-large',
-  'full'
+  'full',
 ] as const;
 
 export type InputWidth = (typeof InputWidths)[number];
-
 
 export interface DoughUiInputProps extends Omit<InputProps, 'size'> {
   /**
@@ -34,28 +34,44 @@ export interface DoughUiInputProps extends Omit<InputProps, 'size'> {
    */
   sizeMode?: SizeMode;
 
+  /**
+   * The broader style of the input, bordered or borderless
+   *
+   * @default bordered
+   */
   inputStyle?: InputStyle;
+
+  /**
+   * The standard width of the input
+   *
+   * @default medium
+   */
   width?: InputWidth;
 }
 
-export function Input({
-  size = 'medium',
-  className,
-  inputStyle = 'bordered',
-  width = 'medium',
-  sizeMode = 'globally-relative',
-  ...props
-}: DoughUiInputProps) {
-  useUiFont();
+export const Input = forwardRef<HTMLInputElement, DoughUiInputProps>(
+  function Input(
+    {
+      size = 'medium',
+      className,
+      inputStyle = 'bordered',
+      width = 'medium',
+      sizeMode = 'globally-relative',
+      ...props
+    },
+    ref
+  ) {
+    useUiFont();
 
-  const cssClasses = classNames(
-    className,
-    styles.Input,
-    styles[`Size_${size}`],
-    styles[`SizeMode_${sizeMode}`],
-    styles[`Width_${width}`],
-    styles[`Style_${inputStyle}`]
-  );
+    const cssClasses = classNames(
+      className,
+      styles.Input,
+      styles[`Size_${size}`],
+      styles[`SizeMode_${sizeMode}`],
+      styles[`Width_${width}`],
+      styles[`Style_${inputStyle}`]
+    );
 
-  return <ReactAriaInput {...props} className={cssClasses} />;
-}
+    return <ReactAriaInput {...props} className={cssClasses} ref={ref} />;
+  }
+);

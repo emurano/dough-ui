@@ -1,5 +1,6 @@
 import { useTextFont } from '@hooks/use-text-font';
 import { BaseComponentProps } from '@type/base-component-props.type';
+import { forwardRef } from 'react';
 import {
   LabelProps as ReactAriaLabelProps,
   Label as ReactAriaLabel,
@@ -10,7 +11,13 @@ export interface DoughUiLabelProps
   extends Omit<BaseComponentProps, 'className' | 'style'>,
     ReactAriaLabelProps {}
 
-export function Label({ children, ...props }: DoughUiLabelProps) {
-  useTextFont();
-  return <ReactAriaLabel {...props} className={styles.Label}>{children}</ReactAriaLabel>;
-}
+export const Label = forwardRef<HTMLLabelElement, DoughUiLabelProps>(
+  function Label({ children, ...props }, ref) {
+    useTextFont();
+    return (
+      <ReactAriaLabel {...props} className={styles.Label} ref={ref}>
+        {children}
+      </ReactAriaLabel>
+    );
+  }
+);

@@ -2,4 +2,5 @@
 
 .Label {
   @include text.text-font;
+  font-weight: bold;
 }

@@ -1,1 +1,0 @@
-{"version":3,"file":"dough-ui.provider.d.ts","sourceRoot":"","sources":["../../../src/providers/dough-ui-provider/dough-ui.provider.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,OAAO,CAAC;AAElC,MAAM,WAAW,oBAAoB;IACnC,QAAQ,CAAC,EAAE,SAAS,CAAC;CACtB;AAGD,wBAAgB,eAAe,CAAC,EAAE,QAAQ,EAAE,EAAE,oBAAoB,2CAEjE"}

@@ -1,5 +1,0 @@
-import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as a}from"./index-BrnU7xv7.js";import{ae as e,af as p,ag as i}from"./index-D457VAi_.js";import{P as m,a as s}from"./paragraph-text.component.stories-b9S8uMMv.js";import"./index-DJO9vBfz.js";import"./iframe-uxaDaVsF.js";import"../sb-preview/runtime.js";import"./index-BUNX8oyq.js";import"./index-D-8MO0q_.js";import"./index-0wbOH00J.js";import"./index-DrFu-skq.js";import"./size-mode.type-CSJTD4N0.js";import"./paragraph-text.component-BNGWNwMi.js";import"./use-font-context.hook-C8Me2VC6.js";import"./font.context-DuSAQ3rx.js";import"./use-text-font.hook-j3ksqt15.js";function n(r){const o={h1:"h1",p:"p",...a(),...r.components};return t.jsxs(t.Fragment,{children:[t.jsx(e,{of:m}),`
-`,t.jsx(o.h1,{id:"paragraph",children:"Paragraph"}),`
-`,t.jsx(o.p,{children:"A paragraph element with the proper text styling"}),`
-`,t.jsx(p,{of:s}),`
-`,t.jsx(i,{})]})}function _(r={}){const{wrapper:o}={...a(),...r.components};return o?t.jsx(o,{...r,children:t.jsx(n,{...r})}):n(r)}export{_ as default};

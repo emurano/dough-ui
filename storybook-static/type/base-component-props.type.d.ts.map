@@ -1,1 +1,0 @@
-{"version":3,"file":"base-component-props.type.d.ts","sourceRoot":"","sources":["../../src/type/base-component-props.type.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,OAAO,CAAC;AAEtC;;GAEG;AACH,MAAM,WAAW,kBAAkB;IAEjC;;;OAGG;IACH,MAAM,CAAC,EAAE,MAAM,CAAC;IAEhB,SAAS,CAAC,EAAE,MAAM,CAAC;IAEnB,KAAK,CAAC,EAAE,aAAa,CAAC;CACvB"}

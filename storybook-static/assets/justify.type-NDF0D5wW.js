@@ -1,1 +1,0 @@
-const e=["center","start","end","stretch","baseline"],s=["block","inline","inline-block"],n=["none","extra-small","small","medium","large","extra-large"],t=["center","start","end","stretch","space-around","space-evenly"];export{e as A,s as B,n as G,t as J};

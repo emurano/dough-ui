@@ -1,1 +1,0 @@
-{"version":3,"file":"font.provider.d.ts","sourceRoot":"","sources":["../../../src/providers/font-provider/font.provider.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAmB,MAAM,OAAO,CAAC;AAGnD,MAAM,WAAW,iBAAiB;IAChC,QAAQ,EAAE,SAAS,CAAC;CACrB;AAED,wBAAgB,YAAY,CAAC,EAAE,QAAQ,EAAE,EAAE,iBAAiB,2CAiB3D"}

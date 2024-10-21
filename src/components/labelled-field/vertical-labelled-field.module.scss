@@ -1,0 +1,64 @@
+.VerticalLabelledField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .LabelContainer {
+    .Label {
+      cursor: pointer;
+    }
+
+    &.Width_extra-small {
+      width: 3em;
+      max-width: 100%;
+    }
+
+    &.Width_small {
+      width: 10em;
+      max-width: 100%;
+    }
+
+    &.Width_medium {
+      width: 15em;
+      max-width: 100%;
+    }
+
+    &.Width_large {
+      width: 25em;
+      max-width: 100%;
+    }
+
+    &.Width_extra-large {
+      width: 40em;
+      max-width: 100%;
+    }
+
+  }
+
+  .FieldContainer {
+    &.Width_extra-small {
+      width: 3em;
+      max-width: 100%;
+    }
+
+    &.Width_small {
+      width: 10em;
+      max-width: 100%;
+    }
+
+    &.Width_medium {
+      width: 15em;
+      max-width: 100%;
+    }
+
+    &.Width_large {
+      width: 25em;
+      max-width: 100%;
+    }
+
+    &.Width_extra-large {
+      width: 40em;
+      max-width: 100%;
+    }
+  }
+}

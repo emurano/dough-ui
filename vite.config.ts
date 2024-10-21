@@ -53,6 +53,7 @@ export default defineConfig({
       '@src': resolve(__dirname, './src'),
       '@components': resolve(__dirname, './src/components'),
       '@hooks': resolve(__dirname, './src/hooks'),
+      '@layout-primitives': resolve(__dirname, './src/layout-primitives'),
       '@page-layouts': resolve(__dirname, './src/page-layouts'),
       '@providers': resolve(__dirname, './src/providers'),
       '@styling': resolve(__dirname, './src/styling'),

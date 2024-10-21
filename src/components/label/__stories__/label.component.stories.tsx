@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Input } from '@src/components/input';
-import { ColumnStack, RowStack } from "../../../layout-primitives";
+import { ColumnStack } from "@layout-primitives/column-stack";
+import { RowStack } from '@layout-primitives/row-stack';
 import { Label } from '../label.component';
 
 const meta = {
@@ -25,6 +26,7 @@ type Story = StoryObj<typeof meta>;
 export const Example: Story = {
   name: 'example',
   render: ({ children, ...args }) => <Label {...args}>{children}</Label>,
+
 };
 
 export const NextToTextField: Story = {

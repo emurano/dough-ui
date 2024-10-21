@@ -1,7 +1,7 @@
-import { SizeModes, Sizes, Variants } from "@src/type";
 import { Meta, StoryObj } from '@storybook/react';
-import { ColumnStack, RowStack } from '../../../layout-primitives';
-import { Button, ButtonStyles } from "../button.component";
+import { SizeModes, Sizes, Variants } from '@src/type';
+import { ColumnStack, RowStack } from '@src/layout-primitives';
+import { Button, ButtonStyles } from '@components/button';
 
 const meta = {
   title: 'Components/Button',

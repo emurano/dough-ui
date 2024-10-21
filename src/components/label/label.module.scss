@@ -1,6 +1,10 @@
+@use '@styling/colour';
 @use '@styling/text.scss';
 
 .Label {
   @include text.text-font;
   font-weight: bold;
+  color: colour.$colour-primary-1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

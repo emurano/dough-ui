@@ -1,0 +1,5 @@
+import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as e}from"./index-BrnU7xv7.js";import"./index-DJO9vBfz.js";import{ae as s,af as i,ag as m}from"./index-D457VAi_.js";import{S as a,P as p}from"./centred-page-layout.component.stories-B3cl-yJ8.js";import"./iframe-uxaDaVsF.js";import"../sb-preview/runtime.js";import"./index-BUNX8oyq.js";import"./index-D-8MO0q_.js";import"./index-0wbOH00J.js";import"./index-DrFu-skq.js";import"./text.component-BSQFrYy0.js";import"./use-font-context.hook-C8Me2VC6.js";import"./font.context-DuSAQ3rx.js";import"./use-text-font.hook-j3ksqt15.js";function n(o){const r={h1:"h1",h2:"h2",...e(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(s,{of:a}),`
+`,t.jsx(r.h1,{id:"centredpagelayout",children:"CentredPageLayout"}),`
+`,t.jsx(i,{of:p}),`
+`,t.jsx(r.h2,{id:"props",children:"Props"}),`
+`,t.jsx(m,{})]})}function L(o={}){const{wrapper:r}={...e(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(n,{...o})}):n(o)}export{L as default};

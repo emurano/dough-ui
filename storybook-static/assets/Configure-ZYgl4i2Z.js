@@ -1,0 +1,3 @@
+import{j as t}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as r}from"./index-BrnU7xv7.js";import{ae as i}from"./index-D457VAi_.js";import"./index-DJO9vBfz.js";import"./iframe-uxaDaVsF.js";import"../sb-preview/runtime.js";import"./index-BUNX8oyq.js";import"./index-D-8MO0q_.js";import"./index-0wbOH00J.js";import"./index-DrFu-skq.js";function e(o){const n={h1:"h1",p:"p",...r(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Dough UI"}),`
+`,t.jsx(n.h1,{id:"dough-ui",children:"Dough UI"}),`
+`,t.jsx(n.p,{children:"This is a simple component library used by the Dough App."})]})}function l(o={}){const{wrapper:n}={...r(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{l as default};

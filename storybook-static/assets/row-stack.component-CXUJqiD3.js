@@ -1,0 +1,5 @@
+import{j as o}from"./jsx-runtime-CkxqCPlQ.js";import{useMDXComponents as i}from"./index-BrnU7xv7.js";import"./index-DJO9vBfz.js";import{ae as m,af as s,ag as p}from"./index-D457VAi_.js";import{S as e,P as a}from"./row-stack.component.stories-Clv4DCzn.js";import"./iframe-uxaDaVsF.js";import"../sb-preview/runtime.js";import"./index-BUNX8oyq.js";import"./index-D-8MO0q_.js";import"./index-0wbOH00J.js";import"./index-DrFu-skq.js";import"./button.component-Dpo8TRij.js";import"./useFocusRing-DUshZhsV.js";import"./use-font-context.hook-C8Me2VC6.js";import"./font.context-DuSAQ3rx.js";import"./heading.component-PQiNkCI9.js";import"./paragraph-text.component-BNGWNwMi.js";import"./use-text-font.hook-j3ksqt15.js";import"./justify.type-NDF0D5wW.js";import"./row-stack.component-D3P-nwYQ.js";function n(t){const r={h1:"h1",h2:"h2",...i(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(m,{of:e}),`
+`,o.jsx(r.h1,{id:"rowstack",children:"RowStack"}),`
+`,o.jsx(s,{of:a}),`
+`,o.jsx(r.h2,{id:"props",children:"Props"}),`
+`,o.jsx(p,{})]})}function v(t={}){const{wrapper:r}={...i(),...t.components};return r?o.jsx(r,{...t,children:o.jsx(n,{...t})}):n(t)}export{v as default};

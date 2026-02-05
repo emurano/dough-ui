@@ -6,3 +6,4 @@ export * from './justify.type';
 export * from './size.type';
 export * from './size-mode.type';
 export * from './variant.type';
+export * from './wrap-mode.type';

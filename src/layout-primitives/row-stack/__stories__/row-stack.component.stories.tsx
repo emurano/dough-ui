@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Button } from "@components/button";
 import { Heading } from '@components/heading';
 import { ParagraphText } from '@components/paragraph-text';
+import { WrapModes } from '@type/wrap-mode.type';
 import { Alignments } from "../../../type/alignment.type";
 import { BlockModes } from "../../../type/block-mode.type";
 import { GapSizes } from '../../../type/gap-size.type';
@@ -31,7 +32,11 @@ const meta = {
     blockMode: {
       control: 'select',
       options: [...BlockModes],
-    }
+    },
+    wrapMode: {
+      control: 'select',
+      options: [...WrapModes],
+    },
   },
 
   args: {},

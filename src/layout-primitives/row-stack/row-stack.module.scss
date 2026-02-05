@@ -5,6 +5,9 @@
   &.BlockMode_inline { display: inline-flex; }
   &.BlockMode_inline-block { display: inline-flex; }
 
+  &.WrapMode_wrap { flex-wrap: wrap; }
+  &.WrapMode_nowrap { flex-wrap: nowrap; }
+
   &.GapSize_extra-none { gap: 0; }
   &.GapSize_extra-small { gap: 0.25rem; }
   &.GapSize_small { gap: 0.75rem; }

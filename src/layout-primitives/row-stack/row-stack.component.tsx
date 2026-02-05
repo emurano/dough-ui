@@ -1,3 +1,4 @@
+import { WrapMode } from "@type/wrap-mode.type";
 import { BlockMode } from '../../type/block-mode.type';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
@@ -13,6 +14,7 @@ export interface RowStackProps extends BaseComponentProps {
   horizontalJustify?: Justify;
   verticalAlignment?: Alignment;
   blockMode?: BlockMode;
+  wrapMode?: WrapMode;
 }
 
 export function RowStack({
@@ -23,6 +25,7 @@ export function RowStack({
   horizontalJustify = 'stretch',
   verticalAlignment = 'center',
   blockMode = 'block',
+  wrapMode = 'nowrap',
 }: RowStackProps) {
   const containerClassNames = classNames(
     styles.RowStack,
@@ -31,6 +34,7 @@ export function RowStack({
     styles[`HorizontalJustify_${horizontalJustify}`],
     styles[`VerticalAlignment_${verticalAlignment}`],
     styles[`BlockMode_${blockMode}`],
+    styles[`WrapMode_${wrapMode}`],
   );
 
   return (

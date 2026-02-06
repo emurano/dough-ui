@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { SizeModes } from '../../../type/size-mode.type.ts';
-import { Sizes } from '../../../type/size.type.ts';
-import { ParagraphText } from '../../paragraph-text';
+import { SizeModes } from '@type/size-mode.type';
+import { Sizes } from '@type/size.type.ts';
+import { ParagraphText } from '@components/paragraph-text';
 import { Heading, HeadingLevels } from '../heading.component';
 
 const meta = {

@@ -1,0 +1,16 @@
+export const generateIconsMap = new Map<string, string>([
+  ['save', 'faFloppyDisk'],
+  ['x-mark', 'faXmark'],
+  ['delete', 'faTrashCan'],
+  ['edit', 'faPenToSquare'],
+  ['magnifying-glass', 'faMagnifyingGlass'],
+  ['folder', 'faFolder'],
+  ['folder-open', 'faFolderOpen'],
+  ['folder-plus', 'faFolderPlus'],
+  ['folder-minus', 'faFolderMinus'],
+  ['folder-tree', 'faFolderTree'],
+  ['file', 'faFile'],
+  ['file-import', 'faFileImport'],
+  ['spinner', 'faSpinner'],
+  ['coins', 'faCoins'],
+]);

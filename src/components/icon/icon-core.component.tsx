@@ -2,6 +2,7 @@ import { FlipProp, IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BaseComponentProps } from '@type/base-component-props.type';
 import classNames from 'classnames';
+import { CSSProperties } from "react";
 import { DoughUiIconSize, iconSizeMap } from './types';
 import styles from './icon-core.module.scss';
 
@@ -18,6 +19,10 @@ export const IconAnimations = [
   'beat-fade',
 ] as const;
 export type IconAnimation = (typeof IconAnimations)[number];
+
+type CSSVariablesTemp = {
+  [K in `--fa-${string}`]?: string | undefined;
+};
 
 export interface DoughUiIconCoreProps extends BaseComponentProps {
   iconGlyph: IconProp;
@@ -38,7 +43,7 @@ export function IconCore({
     <FontAwesomeIcon
       icon={iconGlyph}
       data-testid={testId}
-      style={style}
+      style={style as (CSSProperties & CSSVariablesTemp) | undefined}
       className={classNames(styles.IconCore, className)}
       size={faSize}
       spin={animation === 'spin'}

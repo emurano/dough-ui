@@ -52,7 +52,9 @@
     "test": "vitest run",
     "test-coverage": "vitest run --coverage",
     "prettier-check": "prettier . --check",
-    "generate-icons": "node ./bin/generate-icons.js"
+    "generate-icons": "node ./bin/generate-icons.js",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "classnames": "^2.5.1"
@@ -100,6 +102,13 @@
     "vite": "^7.3.1",
     "vite-plugin-dts": "^4.5.4",
     "vite-plugin-lib-inject-css": "^2.2.2",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "storybook": "^10.2.7",
+    "@storybook/react-vite": "^10.2.7",
+    "@chromatic-com/storybook": "^5.0.0",
+    "@storybook/addon-vitest": "^10.2.7",
+    "@storybook/addon-a11y": "^10.2.7",
+    "@storybook/addon-docs": "^10.2.7",
+    "eslint-plugin-storybook": "^10.2.7"
   }
 }

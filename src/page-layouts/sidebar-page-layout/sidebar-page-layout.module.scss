@@ -1,0 +1,13 @@
+@use '@styling/colour';
+
+.SidebarPageLayout {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: colour.$colour-background;
+
+  &.WithPadding {
+    padding: 1rem;
+  }
+}

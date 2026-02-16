@@ -1,14 +1,15 @@
 import { Text } from '@components/text';
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { CenteredPageLayout } from '../centered-page-layout.component';
+import { StandardPageLayout } from '../standard-page-layout.component';
 
 const meta = {
-  title: 'PageLayouts / CentredPageLayout',
-  component: CenteredPageLayout,
+  title: 'PageLayouts / StandardPageLayout',
+  component: StandardPageLayout,
   parameters: {
     layout: 'fullscreen',
   },
   argTypes: {
+    noPadding: { control: 'boolean' },
     children: {
       control: 'text',
     },
@@ -17,15 +18,15 @@ const meta = {
   args: {
     children: 'This is the content of the page',
   },
-} satisfies Meta<typeof CenteredPageLayout>;
+} satisfies Meta<typeof StandardPageLayout>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   render: (args) => (
-    <CenteredPageLayout {...args}>
-      <Text size="large">{args.children}</Text>
-    </CenteredPageLayout>
+    <StandardPageLayout {...args}>
+      <Text>{args.children}</Text>
+    </StandardPageLayout>
   ),
 };

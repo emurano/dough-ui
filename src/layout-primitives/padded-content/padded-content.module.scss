@@ -1,0 +1,42 @@
+@use '@styling/scss/colour';
+
+.PaddedContent {
+  box-sizing: border-box;
+  width: 100%;
+
+  &.WithTopPadding {
+    padding-top: 1rem;
+  }
+
+  &.WithBottomPadding {
+    padding-bottom: 1rem;
+  }
+
+  &.WithSidePadding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &.WithTopBorder {
+    border-top: 1px solid #ccc;
+  }
+
+  &.WithBottomBorder {
+    border-bottom: 1px solid #ccc;
+  }
+
+  &.ColourScheme_dark {
+    background-color: colour.$colour-neutral-9;
+    color: colour.$colour-neutral-10;
+  }
+
+  &.ColourScheme_light {
+    background-color: colour.$colour-background;
+    color: colour.$colour-neutral-1;
+  }
+
+  &.ColourScheme_accented {
+    background-color: colour.$colour-accented-background;
+    color: colour.$colour-neutral-1;
+  }
+}

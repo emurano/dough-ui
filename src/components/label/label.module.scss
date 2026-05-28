@@ -1,5 +1,5 @@
-@use '@styling/colour';
-@use '@styling/text.scss';
+@use '@styling/scss/colour';
+@use '@styling/scss/text';
 
 .Label {
   @include text.text-font;

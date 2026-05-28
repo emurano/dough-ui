@@ -19,6 +19,7 @@ export function ColumnStack({
   children,
   testId,
   className,
+  style,
   gapSize = 'medium',
   horizontalAlignment = 'center',
   verticalJustify = 'center',
@@ -30,11 +31,11 @@ export function ColumnStack({
     styles[`GapSize_${gapSize}`],
     styles[`HorizontalAlignment_${horizontalAlignment}`],
     styles[`VerticalJustify_${verticalJustify}`],
-    styles[`BlockMode_${blockMode}`],
+    styles[`BlockMode_${blockMode}`]
   );
 
   return (
-    <div data-testid={testId} className={containerClassNames}>
+    <div data-testid={testId} style={style} className={containerClassNames}>
       {children}
     </div>
   );

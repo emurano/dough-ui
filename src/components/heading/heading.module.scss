@@ -1,5 +1,5 @@
-@use '@styling/colour';
-@use '@styling/text';
+@use '@styling/scss/colour';
+@use '@styling/scss/text';
 
 .Heading {
   @include text.heading-font;

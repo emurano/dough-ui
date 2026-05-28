@@ -1,7 +1,7 @@
 export const Sizes = [
   'extra-small',
   'small',
-  'medium',
+  'standard',
   'large',
   'extra-large',
 ] as const;

@@ -1,5 +1,5 @@
-@use '@styling/text';
-@use '@styling/colour';
+@use '@styling/scss/text';
+@use '@styling/scss/colour';
 
 .ParagraphText {
   @include text.text-font;

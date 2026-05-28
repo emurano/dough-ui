@@ -66,6 +66,9 @@ $colour-primary-hover: var(--dough-ui-colour-primary-hover, color-mix(in srgb, $
 $colour-primary-focus-ring: var(--dough-ui-colour-primary-focus-ring, color-mix(in srgb, $colour-primary-1 25%, #633100));
 $colour-primary-hover: var(--dough-ui-colour-primary-hover, color-mix(in srgb, $colour-primary-1 75%, #ffffff));
 
+
+$colour-border: var(--dough-ui-colour-border, $colour-neutral-7);
+
 $colour-neutral-lightest: white;
 $colour-neutral-darkest: black;
 

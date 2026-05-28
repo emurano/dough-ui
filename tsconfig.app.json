@@ -28,30 +28,15 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@src/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@page-layouts/*": [
-        "./src/page-layouts/*"
-      ],
-      "@layout-primitives/*": [
-        "./src/layout-primitives/*"
-      ],
-      "@providers/*": [
-        "./src/providers/*"
-      ],
-      "@styling/*": [
-        "./src/styling/*"
-      ],
-      "@type/*": [
-        "./src/type/*"
-      ]
+      "@src/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@page-layouts/*": ["./src/page-layouts/*"],
+      "@layout-primitives/*": ["./src/layout-primitives/*"],
+      "@providers/*": ["./src/providers/*"],
+      "@styling/*": ["./src/styling/*"],
+      "@type/*": ["./src/type/*"]
     }
   },
   "include": [

@@ -56,3 +56,13 @@ export const AllIcons: Story = {
     </RowStack>
   ),
 };
+
+export const WithText: Story = {
+  name: 'with text',
+  render: (args) => (
+    <RowStack gapSize="extra-small">
+      <Icon {...args} />
+      <Text size={args.size} sizeMode="parent-relative">This text has the same size as the icon</Text>
+    </RowStack>
+  ),
+};

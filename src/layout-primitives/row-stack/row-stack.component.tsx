@@ -25,7 +25,7 @@ export function RowStack({
   horizontalJustify = 'stretch',
   verticalAlignment = 'center',
   blockMode = 'block',
-  wrapMode = 'nowrap',
+  wrapMode = 'wrap',
 }: RowStackProps) {
   const containerClassNames = classNames(
     styles.RowStack,

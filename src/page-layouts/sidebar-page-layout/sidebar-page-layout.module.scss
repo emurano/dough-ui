@@ -1,13 +1,63 @@
-@use '@styling/colour';
+@use '@styling/scss/colour';
+@use '@styling/scss/text';
 
 .SidebarPageLayout {
   min-height: 100vh;
   width: 100%;
+  container-type: inline-size;
   box-sizing: border-box;
 
   background-color: colour.$colour-background;
 
-  &.WithPadding {
-    padding: 1rem;
+  @include text.text-font;
+
+  display: flex;
+  flex-direction: row;
+
+  .Content {
+    background-color: rgba(0, 0, 254, 0.1);
+    flex: 1;
+    min-height: 0;
+
+    &.LeftSidebarOpen {
+
+    }
+
+    &.LeftSidebarOpen {
+
+    }
+  }
+
+  .LeftSidebar {
+    background-color: rgba(0, 254, 0, 0.1);
+    border-right: 1px solid colour.$colour-border;
+
+    &.WithShadow {
+      box-shadow: 5px 0 10px -5px rgba(0, 0, 0, 0.1)
+    }
+  }
+
+  .RightSidebar {
+    background-color: rgba(0, 254, 0, 0.1);
+    border-left: 1px solid colour.$colour-border;
+
+    &.WithShadow {
+      box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .RightSidebar, .LeftSidebar {
+    min-height: 0;
+    transition: width 200ms;
+    overflow: auto;
+    container-type: inline-size;
+
+    &.Hidden {
+      width: 0;
+    }
+
+    .ConstantWidthContainer {
+      transition: width 200ms;
+    }
   }
 }
